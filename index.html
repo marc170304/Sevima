@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="dodgerblue" />
+
+    <title>My Library</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="top-bar"></nav>
+
+    <div class="content">
+      <div class="col-1">
+        <div class="user-information my-container">
+          <div class="user-img">
+            <img src="3.jpg" alt="Logo" />
+          </div>
+          <h1 class="user-name">Muhammad Roihan Abid Saiko</h1>
+          <p class="user-bio"><i class="fi-sr-broom"></i> Programmer Newboie</p>
+          <ul>
+            <li>
+              <p>Number of Book</p>
+              <h4 id="jumlahBuku">10</h4>
+            </li>
+          </ul>
+        </div>
+
+        <div class="my-container icons">
+          <div class="my-icon">
+            <div class="read-icon">
+              <i class="fi-rr-book-alt"></i>
+            </div>
+            <h5>Already Read</h5>
+          </div>
+
+          <div class="my-icon">
+            <div class="unread-icon">
+              <i class="fi-rr-bookmark"></i>
+            </div>
+            <h5>Unread</h5>
+          </div>
+
+          <div class="my-icon">
+            <div class="add-book" id="add-book">
+              <i class="fi-sr-add"></i>
+            </div>
+            <h5>add</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="my-container welcome">
+          <h1>welcome To My Library</h1>
+          <p>Menyimpan & Mengelola Buku Lebih Efisien Hanya Di My Library.</p>
+        </div>
+
+        <div class="content-book">
+          <div class="unread" id="unread">
+            <h4 class="">Belum Dibaca</h4>
+          </div>
+
+          <div class="read" id="read">
+            <h4>Sudah Dibaca</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal">
+      <section class="my-container">
+        <h2>New Book</h2>
+        <form id="form">
+          <div class="input-group">
+            <input type="text" id="title" placeholder="Nama Buku" class="input-form" maxlength="120" pattern="^[a-zA-Z0-9_ ]*$" required />
+          </div>
+          <div class="input-group">
+            <input type="text" id="author" placeholder="Author" class="input-form" maxlength="60" pattern="^[a-zA-Z0-9_ ]*$" required />
+          </div>
+          <div class="input-group">
+            <input type="date" id="date" class="input-form" min="1900" max="2030" />
+          </div>
+          <div class="button-group">
+            <button type="reset" class="close" id="close">Close</button>
+            <button type="submit" id="save">Save</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <script src="storage.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
